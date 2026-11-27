@@ -16,6 +16,7 @@ jobs:
           distribution: temurin
           java-version: 17
       - run: npm install
+      - run: npm install -D typescript
       - run: npx cap add android || true
       - run: npx cap sync android
       - run: cd android && chmod +x gradlew && ./gradlew assembleDebug --stacktrace
